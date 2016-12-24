@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,12 +51,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CongViec.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CT_CongViec.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DanhBa.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSoTayCaNhan.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSoTayCaNhan.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSoTayCaNhan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBSoTayCaNhan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSoTayCaNhan.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LichTrinh.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDungDAL.cs" />
+    <Compile Include="NhacNho.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhanQuyen.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongBao.cs">
+      <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="DBSoTayCaNhan.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBSoTayCaNhan.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBSoTayCaNhan.edmx.diagram">
+      <DependentUpon>DBSoTayCaNhan.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBSoTayCaNhan.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSoTayCaNhan.edmx</DependentUpon>
+      <LastGenOutput>DBSoTayCaNhan.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBSoTayCaNhan.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSoTayCaNhan.edmx</DependentUpon>
+      <LastGenOutput>DBSoTayCaNhan.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

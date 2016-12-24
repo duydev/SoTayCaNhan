@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b7f79cfe93024bc7aa1d422baf7825be" Name="Diagram1">
+        <EntityTypeShape EntityType="SoTayCaNhanModel.CongViec" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoTayCaNhanModel.CT_CongViec" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoTayCaNhanModel.DanhBa" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoTayCaNhanModel.LichTrinh" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoTayCaNhanModel.NguoiDung" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoTayCaNhanModel.NhacNho" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoTayCaNhanModel.PhanQuyen" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoTayCaNhanModel.ThongBao" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SoTayCaNhanModel.FK__CongViec__MaNguo__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="SoTayCaNhanModel.FK__CT_CongVi__MaCon__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="SoTayCaNhanModel.FK__DanhBa__MaNguoiD__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="SoTayCaNhanModel.FK__LichTrinh__MaNgu__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="SoTayCaNhanModel.FK__NhacNho__MaLichT__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="SoTayCaNhanModel.FK__NguoiDung__MaPha__20C1E124" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

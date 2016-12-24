@@ -50,6 +50,14 @@ namespace Presentation.Helper
         }
 
         /// <summary>
+        /// Đăng xuất
+        /// </summary>
+        public static void Logout()
+        {
+            loginUser = null;
+        }
+
+        /// <summary>
         /// Sinh mã MD5
         /// </summary>
         /// <param name="input"></param>
@@ -65,6 +73,28 @@ namespace Presentation.Helper
                 sb.Append(hash[i].ToString("X2"));
             }
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Lấy thông tin người dùng đang đăng nhập.
+        /// </summary>
+        /// <returns></returns>
+        public static NguoiDung User()
+        {
+            return loginUser;
+        }
+
+        /// <summary>
+        /// Cập nhật lại thông tin người dùng đang đăng nhập.
+        /// </summary>
+        public static void UpdateUserData()
+        {
+            NguoiDungBLL ndBLL = new NguoiDungBLL();
+            NguoiDung nd = ndBLL.layNguoiDungTheoMa(loginUser.MaNguoiDung);
+            if(nd != null)
+            {
+                loginUser = nd;
+            }
         }
 
     }

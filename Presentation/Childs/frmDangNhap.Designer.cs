@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
+            this.chkGiuDangNhap = new DevExpress.XtraEditors.CheckEdit();
+            this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenDangNhap = new DevExpress.XtraEditors.TextEdit();
-            this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
-            this.chkGiuDangNhap = new DevExpress.XtraEditors.CheckEdit();
-            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGiuDangNhap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -57,14 +57,37 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Đăng nhập";
             // 
-            // labelControl1
+            // btnDangNhap
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.labelControl1.Location = new System.Drawing.Point(17, 38);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(156, 27);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Tên đăng nhập:";
+            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.btnDangNhap.Appearance.Options.UseFont = true;
+            this.btnDangNhap.Location = new System.Drawing.Point(456, 163);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(156, 39);
+            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
+            // chkGiuDangNhap
+            // 
+            this.chkGiuDangNhap.Location = new System.Drawing.Point(179, 116);
+            this.chkGiuDangNhap.Name = "chkGiuDangNhap";
+            this.chkGiuDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.chkGiuDangNhap.Properties.Appearance.Options.UseFont = true;
+            this.chkGiuDangNhap.Properties.Caption = "Giữ đăng nhập";
+            this.chkGiuDangNhap.Size = new System.Drawing.Size(190, 31);
+            this.chkGiuDangNhap.TabIndex = 4;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Location = new System.Drawing.Point(179, 76);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
+            this.txtMatKhau.Properties.MaxLength = 30;
+            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
+            this.txtMatKhau.Size = new System.Drawing.Size(433, 34);
+            this.txtMatKhau.TabIndex = 3;
             // 
             // labelControl2
             // 
@@ -85,40 +108,18 @@
             this.txtTenDangNhap.Size = new System.Drawing.Size(433, 34);
             this.txtTenDangNhap.TabIndex = 1;
             // 
-            // txtMatKhau
+            // labelControl1
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(179, 76);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.txtMatKhau.Properties.MaxLength = 30;
-            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
-            this.txtMatKhau.Size = new System.Drawing.Size(433, 34);
-            this.txtMatKhau.TabIndex = 3;
-            // 
-            // chkGiuDangNhap
-            // 
-            this.chkGiuDangNhap.Location = new System.Drawing.Point(179, 116);
-            this.chkGiuDangNhap.Name = "chkGiuDangNhap";
-            this.chkGiuDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.chkGiuDangNhap.Properties.Appearance.Options.UseFont = true;
-            this.chkGiuDangNhap.Properties.Caption = "Giữ đăng nhập";
-            this.chkGiuDangNhap.Size = new System.Drawing.Size(190, 31);
-            this.chkGiuDangNhap.TabIndex = 4;
-            // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.btnDangNhap.Appearance.Options.UseFont = true;
-            this.btnDangNhap.Location = new System.Drawing.Point(456, 163);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(156, 39);
-            this.btnDangNhap.TabIndex = 5;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.labelControl1.Location = new System.Drawing.Point(17, 38);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(156, 27);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Tên đăng nhập:";
             // 
             // frmDangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 241);
@@ -128,9 +129,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkGiuDangNhap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

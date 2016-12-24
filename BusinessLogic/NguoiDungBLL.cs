@@ -26,5 +26,51 @@ namespace BusinessLogic
             return nguoidungDAL.layNguoiDungTheoTenDangNhap(tenDangNhap);
         }
 
+        /// <summary>
+        /// Lấy người dùng theo mã người dùng.
+        /// </summary>
+        /// <param name="maNguoiDung"></param>
+        /// <returns></returns>
+        public NguoiDung layNguoiDungTheoMa(int maNguoiDung)
+        {
+            return nguoidungDAL.layNguoiDungTheoMa(maNguoiDung);
+        }
+
+        /// <summary>
+        /// Lấy tất cả người dùng.
+        /// </summary>
+        /// <returns></returns>
+        public List<NguoiDung> layTatCaNguoiDung()
+        {
+            return nguoidungDAL.layTatCaNguoiDung();
+        }
+
+        /// <summary>
+        /// Thêm người dùng.
+        /// </summary>
+        /// <param name="nd"></param>
+        public void them(NguoiDung nd)
+        {
+            nguoidungDAL.them(nd);
+        }
+
+        /// <summary>
+        /// Sửa người dùng.
+        /// </summary>
+        /// <param name="nd"></param>
+        public void sua(NguoiDung nd)
+        {
+            nguoidungDAL.sua(nd);
+        }
+
+        /// <summary>
+        /// Xóa người dùng theo mã người dùng
+        /// </summary>
+        /// <param name="maNguoiDung"></param>
+        public void xoa(int maNguoiDung)
+        {
+            nguoidungDAL.xoa(maNguoiDung);
+        }
+
     }
 }

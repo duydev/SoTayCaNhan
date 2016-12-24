@@ -40,7 +40,7 @@ namespace Presentation.Childs
                 return;
             }
             frmChinh frmChinh = (frmChinh)this.MdiParent;
-            frmChinh.disableRibbon(false);
+            frmChinh.initLogin();
             this.Close();
         }
     }

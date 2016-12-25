@@ -158,5 +158,17 @@ namespace Presentation
         {
             showChildForm(new frmDangKy());
         }
+
+        private void btnThemND_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmNguoiDung frm = new frmNguoiDung();
+            showChildForm(frm);
+            frm.Them();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            showChildForm(new frmDanhBa());
+        }
     }
 }

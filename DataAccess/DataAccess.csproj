@@ -54,12 +54,14 @@
     <Compile Include="CongViec.cs">
       <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
     </Compile>
+    <Compile Include="CongViecDAL.cs" />
     <Compile Include="CT_CongViec.cs">
       <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
     </Compile>
     <Compile Include="DanhBa.cs">
       <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
     </Compile>
+    <Compile Include="DanhBaDAL.cs" />
     <Compile Include="DBSoTayCaNhan.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +80,7 @@
     <Compile Include="LichTrinh.cs">
       <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
     </Compile>
+    <Compile Include="LichTrinhDAL.cs" />
     <Compile Include="NguoiDung.cs">
       <DependentUpon>DBSoTayCaNhan.tt</DependentUpon>
     </Compile>

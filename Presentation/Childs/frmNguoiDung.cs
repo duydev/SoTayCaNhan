@@ -226,5 +226,22 @@ namespace Presentation.Childs
             disableButton(true);
             MessageBox.Show(msg, "Thông báo");
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int[] selectedRows = tblNguoiDungView.GetSelectedRows();
+            foreach(int i in selectedRows)
+            {
+                int maNguoiDung = int.Parse(tblNguoiDungView.GetRowCellDisplayText(i, "MaNguoiDung"));
+                nguoidungBLL.xoa(maNguoiDung);
+            }
+            capnhatBang();
+            MessageBox.Show("Xóa người dùng thành công.", "Thông báo");
+        }
+
+        public void Them()
+        {
+            btnThem.PerformClick();
+        }
     }
 }

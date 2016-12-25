@@ -70,6 +70,12 @@
     <Compile Include="Childs\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Childs\frmDanhBa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childs\frmDanhBa.Designer.cs">
+      <DependentUpon>frmDanhBa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Childs\frmNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Childs\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Childs\frmDanhBa.resx">
+      <DependentUpon>frmDanhBa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Childs\frmNguoiDung.resx">
       <DependentUpon>frmNguoiDung.cs</DependentUpon>

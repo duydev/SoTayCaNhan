@@ -57,11 +57,11 @@
             this.tblNguoiDungView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -133,6 +133,7 @@
             this.btnXoa.Size = new System.Drawing.Size(90, 34);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -363,7 +364,7 @@
             // tblNguoiDung
             // 
             this.tblNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblNguoiDung.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tblNguoiDung.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
             this.tblNguoiDung.Location = new System.Drawing.Point(0, 291);
             this.tblNguoiDung.MainView = this.tblNguoiDungView;
             this.tblNguoiDung.Margin = new System.Windows.Forms.Padding(5);
@@ -404,6 +405,14 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Loại người dùng";
+            this.gridColumn7.FieldName = "PhanQuyen.Ten";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 2;
+            // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Họ Tên";
@@ -435,14 +444,6 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 6;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Loại người dùng";
-            this.gridColumn7.FieldName = "PhanQuyen.Ten";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 2;
             // 
             // frmNguoiDung
             // 

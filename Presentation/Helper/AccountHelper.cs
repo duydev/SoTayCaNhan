@@ -97,5 +97,29 @@ namespace Presentation.Helper
             }
         }
 
+        /// <summary>
+        /// Đăng ký 
+        /// </summary>
+        /// <param name="nd"></param>
+        public static void Register(NguoiDung nd)
+        {
+            NguoiDungBLL ndBLL = new NguoiDungBLL();
+            nd.MatKhau = md5(nd.MatKhau);
+            nd.MaPhanQuyen = 2;
+            ndBLL.them(nd);
+        }
+
+        /// <summary>
+        /// Kiểm tra xem đã đăng nhập chưa.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        public static bool isRegistered(string username)
+        {
+            NguoiDungBLL ndBLL = new NguoiDungBLL();
+            NguoiDung nd = ndBLL.layNguoiDungTheoTenDangNhap(username);
+            return (nd != null);
+        }
+
     }
 }

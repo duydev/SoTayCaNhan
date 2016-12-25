@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraBars;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using Presentation.Childs;
 using Presentation.Helper;
-using DevExpress.XtraBars.Ribbon;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Presentation
 {
@@ -24,7 +18,6 @@ namespace Presentation
         private void frmChinh_Load(object sender, EventArgs e)
         {
             disableBtnDangXuat(true);
-            disableRibbon(true);
             hideRibbonPage(0);
             frmDangNhap frm = new frmDangNhap();
             showChildForm(frm);
@@ -85,7 +78,6 @@ namespace Presentation
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
             AccountHelper.Logout();
-            disableRibbon(true);
             hideRibbonPage(0);
             showChildForm(new frmDangNhap());
             disableBtnDangXuat(true);
@@ -98,7 +90,6 @@ namespace Presentation
         /// </summary>
         public void initLogin()
         {
-            disableRibbon(false);
             disableBtnDangXuat(false);
             hideRibbonPage(AccountHelper.User().PhanQuyen.MaPhanQuyen);
             txtNguoiDung.Caption = AccountHelper.User().Ten;
@@ -133,6 +124,8 @@ namespace Presentation
                 hideRibbonPage(ribDanhba, true);
                 hideRibbonPage(ribCongViec, true);
                 hideRibbonPage(ribLichTrinh, true);
+                ribPGThongTin.Visible = false;
+                ribPGChucNang.Visible = true;
             }
             // Admin
             if(phanquyen == 1)
@@ -141,6 +134,8 @@ namespace Presentation
                 hideRibbonPage(ribDanhba, false);
                 hideRibbonPage(ribCongViec, false);
                 hideRibbonPage(ribLichTrinh, false);
+                ribPGThongTin.Visible = true;
+                ribPGChucNang.Visible = false;
             }
             // Người dùng
             if(phanquyen == 2)
@@ -149,7 +144,19 @@ namespace Presentation
                 hideRibbonPage(ribDanhba, false);
                 hideRibbonPage(ribCongViec, false);
                 hideRibbonPage(ribLichTrinh, false);
+                ribPGThongTin.Visible = true;
+                ribPGChucNang.Visible = false;
             }
+        }
+
+        private void btnCNDangNhap_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            showChildForm(new frmDangNhap());
+        }
+
+        private void btnCNDangKy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            showChildForm(new frmDangKy());
         }
     }
 }

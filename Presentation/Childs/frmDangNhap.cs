@@ -19,17 +19,22 @@ namespace Presentation.Childs
             InitializeComponent();
         }
 
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+            //skipLogin();
+        }
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string tenDangNhap = txtTenDangNhap.Text;
             string matKhau = txtMatKhau.Text;
             bool giuDangNhap = chkGiuDangNhap.Checked;
-            if( tenDangNhap.Length == 0 )
+            if( string.IsNullOrEmpty(tenDangNhap) )
             {
                 MessageBox.Show( "Vui lòng nhập tên đăng nhập.", "Thông báo" );
                 return;
             }
-            if (matKhau.Length == 0)
+            if (string.IsNullOrEmpty(matKhau))
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu.", "Thông báo");
                 return;
@@ -43,5 +48,18 @@ namespace Presentation.Childs
             frmChinh.initLogin();
             this.Close();
         }
+
+        /// <summary>
+        /// Dùng đế bỏ qua đăng nhập nếu lười... :))) ahihi
+        /// </summary>
+        private void skipLogin()
+        {
+            AccountHelper.Login("admin", "admin", false);
+            frmChinh frmChinh = (frmChinh)this.MdiParent;
+            frmChinh.initLogin();
+            this.BeginInvoke(new MethodInvoker(Close));
+        }
+
+        
     }
 }

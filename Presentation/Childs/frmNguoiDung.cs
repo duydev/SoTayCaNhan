@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using BusinessLogic;
+﻿using BusinessLogic;
 using DataAccess;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Presentation.Childs
 {
     public partial class frmNguoiDung : DevExpress.XtraEditors.XtraForm
     {
+        private PhanQuyenBLL phanquyenBLL;
         private NguoiDungBLL nguoidungBLL;
 
         public frmNguoiDung()
         {
             InitializeComponent();
+            phanquyenBLL = new PhanQuyenBLL();
             nguoidungBLL = new NguoiDungBLL();
         }
 
         private void frmNguoiDung_Load(object sender, EventArgs e)
         {
+            capnhatLoaiTaiKhoan();
             capnhatBang();
         }
 
@@ -35,6 +31,21 @@ namespace Presentation.Childs
         {
             List<NguoiDung> list = nguoidungBLL.layTatCaNguoiDung();
             tblNguoiDung.DataSource = list;
+        }
+
+        private void clearInput()
+        {
+
+        }
+
+        public void capnhatLoaiTaiKhoan()
+        {
+            List<PhanQuyen> list = phanquyenBLL.layDanhSachPhanQuyen();
+            BindingSource src = new BindingSource();
+            src.DataSource = list;
+            cbbLoaiTaiKhoan.Properties.DataSource = src;
+            cbbLoaiTaiKhoan.Properties.DisplayMember = "Ten";
+            cbbLoaiTaiKhoan.Properties.ValueMember = "MaPhanQuyen";
         }
 
         

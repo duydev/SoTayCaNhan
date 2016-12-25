@@ -48,6 +48,11 @@ namespace Presentation.Childs
                 MessageBox.Show("Vui lòng nhập email.", "Thông báo");
                 return;
             }
+            if ( ! AccountHelper.isEmail(email) )
+            {
+                MessageBox.Show("Email không hợp lệ.", "Thông báo");
+                return;
+            }
             if (string.IsNullOrEmpty(tenDangNhap))
             {
                 MessageBox.Show("Vui lòng nhập tên đăng nhập.", "Thông báo");

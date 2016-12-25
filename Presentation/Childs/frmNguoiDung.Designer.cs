@@ -36,6 +36,7 @@
             this.btnKhongLuu = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.cbbLoaiTaiKhoan = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -53,20 +54,21 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.ptbAvatar = new System.Windows.Forms.PictureBox();
             this.tblNguoiDung = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tblNguoiDungView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cbbLoaiTaiKhoan = new DevExpress.XtraEditors.LookUpEdit();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -79,8 +81,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNguoiDung)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiTaiKhoan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNguoiDungView)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -108,6 +109,7 @@
             this.btnThem.Size = new System.Drawing.Size(109, 34);
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -119,6 +121,7 @@
             this.btnSua.Size = new System.Drawing.Size(94, 34);
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -141,6 +144,7 @@
             this.btnLuu.Size = new System.Drawing.Size(91, 34);
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnKhongLuu
             // 
@@ -152,6 +156,7 @@
             this.btnKhongLuu.Size = new System.Drawing.Size(149, 34);
             this.btnKhongLuu.TabIndex = 1;
             this.btnKhongLuu.Text = "Không Lưu";
+            this.btnKhongLuu.Click += new System.EventHandler(this.btnKhongLuu_Click);
             // 
             // groupControl1
             // 
@@ -183,6 +188,21 @@
             this.groupControl4.TabIndex = 2;
             this.groupControl4.Text = "Thông tin đăng nhập";
             // 
+            // cbbLoaiTaiKhoan
+            // 
+            this.cbbLoaiTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbLoaiTaiKhoan.Location = new System.Drawing.Point(167, 108);
+            this.cbbLoaiTaiKhoan.Name = "cbbLoaiTaiKhoan";
+            this.cbbLoaiTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
+            this.cbbLoaiTaiKhoan.Properties.Appearance.Options.UseFont = true;
+            this.cbbLoaiTaiKhoan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbLoaiTaiKhoan.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten", "Phân Quyền")});
+            this.cbbLoaiTaiKhoan.Properties.NullText = "-- Trống --";
+            this.cbbLoaiTaiKhoan.Size = new System.Drawing.Size(382, 34);
+            this.cbbLoaiTaiKhoan.TabIndex = 8;
+            // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
@@ -199,6 +219,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
+            this.txtMatKhau.Properties.UseSystemPasswordChar = true;
             this.txtMatKhau.Size = new System.Drawing.Size(382, 34);
             this.txtMatKhau.TabIndex = 6;
             // 
@@ -342,26 +363,30 @@
             // tblNguoiDung
             // 
             this.tblNguoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblNguoiDung.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tblNguoiDung.Location = new System.Drawing.Point(0, 291);
-            this.tblNguoiDung.MainView = this.gridView1;
+            this.tblNguoiDung.MainView = this.tblNguoiDungView;
             this.tblNguoiDung.Margin = new System.Windows.Forms.Padding(5);
             this.tblNguoiDung.Name = "tblNguoiDung";
             this.tblNguoiDung.Size = new System.Drawing.Size(1452, 440);
             this.tblNguoiDung.TabIndex = 1;
             this.tblNguoiDung.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.tblNguoiDungView});
             // 
-            // gridView1
+            // tblNguoiDungView
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.tblNguoiDungView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
+            this.gridColumn7,
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6});
-            this.gridView1.GridControl = this.tblNguoiDung;
-            this.gridView1.Name = "gridView1";
+            this.tblNguoiDungView.GridControl = this.tblNguoiDung;
+            this.tblNguoiDungView.Name = "tblNguoiDungView";
+            this.tblNguoiDungView.OptionsBehavior.Editable = false;
+            this.tblNguoiDungView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.tblNguoiDungView_FocusedRowChanged);
             // 
             // gridColumn1
             // 
@@ -385,7 +410,7 @@
             this.gridColumn3.FieldName = "Ten";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 3;
             // 
             // gridColumn4
             // 
@@ -393,7 +418,7 @@
             this.gridColumn4.FieldName = "SoDienThoai";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 4;
             // 
             // gridColumn5
             // 
@@ -401,7 +426,7 @@
             this.gridColumn5.FieldName = "DiaChi";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.VisibleIndex = 5;
             // 
             // gridColumn6
             // 
@@ -409,22 +434,15 @@
             this.gridColumn6.FieldName = "Email";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 6;
             // 
-            // cbbLoaiTaiKhoan
+            // gridColumn7
             // 
-            this.cbbLoaiTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbLoaiTaiKhoan.Location = new System.Drawing.Point(167, 108);
-            this.cbbLoaiTaiKhoan.Name = "cbbLoaiTaiKhoan";
-            this.cbbLoaiTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.cbbLoaiTaiKhoan.Properties.Appearance.Options.UseFont = true;
-            this.cbbLoaiTaiKhoan.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbLoaiTaiKhoan.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten", "Phân Quyền")});
-            this.cbbLoaiTaiKhoan.Properties.NullText = "-- Trống --";
-            this.cbbLoaiTaiKhoan.Size = new System.Drawing.Size(382, 34);
-            this.cbbLoaiTaiKhoan.TabIndex = 8;
+            this.gridColumn7.Caption = "Loại người dùng";
+            this.gridColumn7.FieldName = "PhanQuyen.Ten";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 2;
             // 
             // frmNguoiDung
             // 
@@ -446,6 +464,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
@@ -459,8 +478,7 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNguoiDung)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiTaiKhoan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblNguoiDungView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,7 +487,7 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraGrid.GridControl tblNguoiDung;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView tblNguoiDungView;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
@@ -500,5 +518,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.LookUpEdit cbbLoaiTaiKhoan;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

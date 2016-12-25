@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic;
+using System.Text.RegularExpressions;
 
 namespace Presentation.Helper
 {
@@ -119,6 +120,16 @@ namespace Presentation.Helper
             NguoiDungBLL ndBLL = new NguoiDungBLL();
             NguoiDung nd = ndBLL.layNguoiDungTheoTenDangNhap(username);
             return (nd != null);
+        }
+
+        /// <summary>
+        /// Kiểm tra xem có phải là email hợp lệ.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool isEmail(string input)
+        {
+            return Regex.IsMatch(input, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);              
         }
 
     }
